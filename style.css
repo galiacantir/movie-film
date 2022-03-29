@@ -1,0 +1,90 @@
+body{
+    /* background-color: #334; */
+    background-image:url(images/poster-film.jpg) ;
+    background-size:cover;
+    background-position: center;
+    
+
+    --size: 40vh;
+    --count:7;
+    --top-marker: calc( var(--size) * 0.04 * 0.75);
+    --bottom-marker: calc( var(--size) * 0.96 * 0.75);
+}
+
+.movies {
+    width: var(--size);
+    height: var(--size);
+    background-color: #123;
+
+    margin-top: 
+        calc( (100vh - var(--size) ) / 2);
+
+    margin-left:
+        calc( 100vw / 3 - var(--size) / 2);
+    
+
+    border-radius: 50%;
+    
+}
+
+.movies .film{
+    /* background-color: #333; */
+    height: calc( var(--size) * 0.75 );
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    width: calc( var(--count) * (var(--size) * 0.92 * 0.75 * 4 / 3 + 1vh));
+
+    background-image: 
+        linear-gradient(transparent, transparent var(--top-marker), #1239 var(--top-marker), #1239 var(--bottom-marker), transparent var(--bottom-marker)),
+        radial-gradient(transparent 50%, #1239 50%),
+        radial-gradient(transparent 50%, #1239 50%);
+    background-size: 
+        cover,
+        var(--top-marker) var(--top-marker),
+        var(--top-marker) var(--top-marker);
+    background-repeat:
+        repeat,
+        repeat-x,
+        repeat-x;
+    background-position:
+        top left,
+        top left,
+        bottom left ;
+
+    filter: drop-shadow(2px 2px 6px black);
+}
+
+.movies .film img{
+    /* display: none; */
+    position: relative;
+    top: calc( var(--size) * 0.04 * 0.75);
+    height: calc( var(--size) * 0.92 * 0.75);
+    margin:0 0.5vh;
+
+}
+
+.movies .controls{
+    background-color: #123;
+    position: absolute;
+    height: calc( var(--size) * 0.8 );
+    width: calc( var(--size) * 0.8 );
+    
+    border-radius: 50%;
+}
+
+/*.movies .controls button{
+    text-align: center;
+}*/
+
+/* HW2 -  */
+/* HW3 - center */
+/* HW4 -  */
+
+
+
